@@ -10,4 +10,7 @@ class MovieViewModel : ViewModel() {
         return BaseApplication.INSTANCE.getAppComponent().getMovieRepository().getMovieData()
     }
 
+    fun getMovieByTitle(title: String): MovieEntity? {
+        return BaseApplication.INSTANCE.getAppComponent().getMovieRepository().getMovieDataByTitle(title)
+    }
 }

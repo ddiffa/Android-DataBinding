@@ -5,11 +5,11 @@
     <data>
 
         <variable
-            name="movie"
-            type="com.example.databindingviewmodel.data.entity.MovieEntity" />
+            name="tvShows"
+            type="com.example.databindingviewmodel.data.entity.TvShowEntity" />
 
         <variable
-            name="imagePosterPath"
+            name="imagePosterPathTV"
             type="String" />
 
         <variable
@@ -46,27 +46,25 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/tvTitle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:layout_marginRight="4dp"
+                        android:layout_marginEnd="4dp"
                         android:fontFamily="@font/mm"
                         android:maxLines="1"
-                        android:text="@{movie.title, default = IT}"
-                        android:textColor="@android:color/background_dark"
+                        android:text="@{tvShows.titleTV, default = IT}"
                         android:textSize="18sp"
+                        android:textColor="@android:color/background_dark"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/tvGenres"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:layout_marginRight="4dp"
+                        android:layout_marginEnd="4dp"
                         android:fontFamily="@font/ml"
                         android:maxLines="2"
-                        android:text="@{movie.genre, default = Horror}"
+                        android:text="@{tvShows.genreTV, default = Horror}"
                         android:textSize="10sp"
                         android:textStyle="italic" />
 
@@ -75,13 +73,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
-                        android:layout_marginRight="4dp"
+                        android:layout_marginEnd="4dp"
                         android:background="@drawable/bgruntime"
                         android:fontFamily="@font/mr"
                         android:maxLines="1"
                         android:paddingLeft="16dp"
                         android:paddingRight="16dp"
-                        android:text="@{Integer.toString(movie.runtime), default = 1}"
+                        android:text="@{Integer.toString(tvShows.seasonTV), default = 1}"
                         android:textColor="@android:color/white" />
 
 
@@ -89,21 +87,20 @@
                         android:id="@+id/tvOverview"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="4dp"
+                        android:layout_marginEnd="4dp"
                         android:fontFamily="@font/mr"
                         android:maxLines="3"
-                        android:text="@{movie.overview, default = Overview}"
+                        android:text="@{tvShows.overviewTV, default = Overview}"
                         android:textSize="11sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_toRightOf="@+id/tvOverview"
                         android:fontFamily="@font/mm"
-                        android:onClick="@{()->handler.onButtonClick(movie.title)}"
+                        android:onClick="@{()->handler.onButtonClick(tvShows.titleTV)}"
                         android:text="Details"
                         android:textColor="@color/colorPrimary"
-                        android:textSize="11sp"
+                        android:textSize="12sp"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -128,7 +125,7 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginBottom="4dp"
                     app:cardCornerRadius="4dp"
-                    app:cardElevation="5dp"
+                    app:cardElevation="4dp"
                     app:cardUseCompatPadding="true">
 
                     <ImageView
@@ -136,7 +133,7 @@
                         android:layout_width="125dp"
                         android:layout_height="185dp"
                         android:scaleType="centerCrop"
-                        app:imagePosterPath="@{imagePosterPath}"
+                        app:imagePosterPathTV="@{imagePosterPathTV}"
                         app:srcCompat="@color/colorAccent" />
                 </androidx.cardview.widget.CardView>
 
@@ -149,7 +146,7 @@
                     android:elevation="10dp"
                     android:fontFamily="@font/mm"
                     android:gravity="center"
-                    android:text="@{Double.toString(movie.voteAverage), default=0}"
+                    android:text="@{Double.toString(tvShows.voteAverageTV), default=0}"
                     android:textColor="@android:color/white"
                     android:textSize="20sp"
                     android:textStyle="bold"

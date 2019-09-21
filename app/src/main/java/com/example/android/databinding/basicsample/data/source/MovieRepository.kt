@@ -6,5 +6,5 @@ interface MovieRepository {
 
     fun getMovieData(): ArrayList<MovieEntity>
 
-    fun getMovieDataByName(name : String) : ArrayList<MovieEntity>
+    fun getMovieDataByTitle(title : String) : MovieEntity?
 }

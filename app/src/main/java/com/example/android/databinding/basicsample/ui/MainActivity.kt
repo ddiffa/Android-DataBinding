@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.example.android.databinding.basicsample.R
 import com.example.android.databinding.basicsample.ui.movie.MovieFragment
+import com.example.android.databinding.basicsample.ui.tvshow.TVShowFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -37,7 +38,7 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
                 setFragment(MovieFragment.getInstance())
             }
             item.itemId == R.id.action_tv_show -> {
-                //TODO
+                setFragment(TVShowFragment.getInstance())
             }
         }
         return true

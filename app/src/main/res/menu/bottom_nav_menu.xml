@@ -3,8 +3,10 @@
     <item
         android:id="@+id/action_movie"
         android:checked="true"
-        android:title="Moive" />
+        android:title="Moive"
+        android:icon="@drawable/filmroll"/>
     <item
         android:id="@+id/action_tv_show"
-        android:title="Tv Show" />
+        android:title="Tv Show"
+        android:icon="@drawable/talkshow"/>
 </menu>

@@ -289,7 +289,7 @@ fun getMovie(movieName: String): MovieEntity? {
 fun getTvShow(tvShowTitle: String): TvShowEntity? {
     for (i in 0 until generateDummyTvShow().size) {
         val tvShow = generateDummyTvShow()[i]
-        if (tvShow._titleYV == tvShowTitle) return tvShow
+        if (tvShow.titleTV == tvShowTitle) return tvShow
     }
     return null
 }
