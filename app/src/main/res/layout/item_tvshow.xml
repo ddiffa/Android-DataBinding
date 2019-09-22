@@ -6,7 +6,7 @@
 
         <variable
             name="tvShows"
-            type="com.example.databindingviewmodel.data.entity.TvShowEntity" />
+            type="com.example.android.databinding.basicsample.data.entity.TvShowEntity" />
 
         <variable
             name="imagePosterPathTV"
@@ -97,7 +97,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/mm"
-                        android:onClick="@{()->handler.onButtonClick(tvShows.titleTV)}"
+                        android:onClick="@{()->handler.onTvShowDetailsClick(tvShows.titleTV)}"
                         android:text="Details"
                         android:textColor="@color/colorPrimary"
                         android:textSize="12sp"

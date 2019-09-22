@@ -6,7 +6,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android.databinding.basicsample.R
 import com.example.android.databinding.basicsample.databinding.ItemMoviesBinding
-import com.example.databindingviewmodel.data.entity.MovieEntity
+import com.example.android.databinding.basicsample.data.entity.MovieEntity
 import com.example.databindingviewmodel.handler.EventHandler
 
 class MovieAdapter(var list: ArrayList<MovieEntity>) : RecyclerView.Adapter<MovieAdapter.ViewHolder>() {

@@ -1,7 +1,7 @@
 package com.example.android.databinding.basicsample.util
 
-import com.example.databindingviewmodel.data.entity.MovieEntity
-import com.example.databindingviewmodel.data.entity.TvShowEntity
+import com.example.android.databinding.basicsample.data.entity.MovieEntity
+import com.example.android.databinding.basicsample.data.entity.TvShowEntity
 
 fun generateDummyMovie(): ArrayList<MovieEntity> {
 

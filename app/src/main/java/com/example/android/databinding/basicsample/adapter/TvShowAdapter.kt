@@ -6,7 +6,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android.databinding.basicsample.R
 import com.example.android.databinding.basicsample.databinding.ItemTvshowBinding
-import com.example.databindingviewmodel.data.entity.TvShowEntity
+import com.example.android.databinding.basicsample.data.entity.TvShowEntity
 import com.example.databindingviewmodel.handler.EventHandler
 
 class TvShowAdapter(var list: ArrayList<TvShowEntity>) : RecyclerView.Adapter<TvShowAdapter.ViewHolder>() {

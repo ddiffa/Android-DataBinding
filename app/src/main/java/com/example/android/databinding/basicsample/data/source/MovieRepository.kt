@@ -1,6 +1,6 @@
 package com.example.android.databinding.basicsample.data.source
 
-import com.example.databindingviewmodel.data.entity.MovieEntity
+import com.example.android.databinding.basicsample.data.entity.MovieEntity
 
 interface MovieRepository {
 

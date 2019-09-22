@@ -1,4 +1,4 @@
-package com.example.databindingviewmodel.data.entity
+package com.example.android.databinding.basicsample.data.entity
 
 import android.widget.ImageView
 import androidx.databinding.BaseObservable
@@ -68,11 +68,9 @@ class TvShowEntity(
             notifyPropertyChanged(BR.firstAirDateTV)
         }
 
-    @get : Bindable
     var posterPathTV: String = _posterPathTV
 
 
-    @get : Bindable
     var backdropPathTV: String = _backdropPathTV
 
 

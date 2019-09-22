@@ -1,4 +1,4 @@
-package com.example.databindingviewmodel.data.entity
+package com.example.android.databinding.basicsample.data.entity
 
 import android.widget.ImageView
 import androidx.databinding.BaseObservable

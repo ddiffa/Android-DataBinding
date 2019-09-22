@@ -6,7 +6,7 @@
 
         <variable
             name="movie"
-            type="com.example.databindingviewmodel.data.entity.MovieEntity" />
+            type="com.example.android.databinding.basicsample.data.entity.MovieEntity" />
 
         <variable
             name="imagePosterPath"
@@ -100,7 +100,7 @@
                         android:layout_height="wrap_content"
                         android:layout_toRightOf="@+id/tvOverview"
                         android:fontFamily="@font/mm"
-                        android:onClick="@{()->handler.onButtonClick(movie.title)}"
+                        android:onClick="@{()->handler.onMovieDetailsClick(movie.title)}"
                         android:text="Details"
                         android:textColor="@color/colorPrimary"
                         android:textSize="11sp"

@@ -65,4 +65,5 @@ dependencies {
     androidTestImplementation "androidx.test.ext:junit:$runnerExtVersion"
     androidTestImplementation "androidx.test:rules:$androidXTestVersion"
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
+    implementation 'com.github.florent37:shapeofview:1.4.7'
 }

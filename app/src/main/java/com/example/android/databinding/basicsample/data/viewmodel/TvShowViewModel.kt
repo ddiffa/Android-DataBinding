@@ -2,7 +2,7 @@ package com.example.android.databinding.basicsample.data.viewmodel
 
 import androidx.lifecycle.ViewModel
 import com.example.android.databinding.basicsample.BaseApplication
-import com.example.databindingviewmodel.data.entity.TvShowEntity
+import com.example.android.databinding.basicsample.data.entity.TvShowEntity
 
 class TvShowViewModel : ViewModel() {
 
