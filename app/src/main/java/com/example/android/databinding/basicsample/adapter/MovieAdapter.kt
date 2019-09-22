@@ -29,7 +29,7 @@ class MovieAdapter(var list: ArrayList<MovieEntity>) : RecyclerView.Adapter<Movi
     class ViewHolder(var dataBinding: ItemMoviesBinding) : RecyclerView.ViewHolder(dataBinding.root) {
         fun bind(movieEntity: MovieEntity) {
             dataBinding.movie = movieEntity
-            dataBinding.imagePosterPath = "http://image.tmdb.org/t/p/w500"+movieEntity.posterPath
+            dataBinding.imagePosterPath = movieEntity.posterPath
             dataBinding.handler = EventHandler(dataBinding.root.context)
         }
 

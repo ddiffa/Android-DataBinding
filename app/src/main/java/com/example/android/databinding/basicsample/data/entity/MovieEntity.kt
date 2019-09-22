@@ -14,7 +14,7 @@ class MovieEntity(
         _posterPath: String,
         _backdrop_path: String,
         _title: String,
-        _voteAverage: Double,
+        _voteAverage: Float,
         _overview: String,
         _realeseDate: String
 ) : BaseObservable(){
@@ -48,7 +48,7 @@ class MovieEntity(
     }
 
     @get : Bindable
-    var voteAverage : Double = _voteAverage
+    var voteAverage : Float = _voteAverage
     set(value) {
         field = value
         notifyPropertyChanged(BR.voteAverage)
@@ -75,14 +75,14 @@ class MovieEntity(
         @BindingAdapter("imagePosterPath")
         fun loadImagePosterPath(img: ImageView, posterPath: String) {
             Glide.with(img.context)
-                    .load(posterPath)
+                    .load("http://image.tmdb.org/t/p/w500"+posterPath)
                     .into(img)
         }
         @JvmStatic
         @BindingAdapter("imageBackdropPath")
         fun loadImageBackdrpPath(img: ImageView, backdropPath: String) {
             Glide.with(img.context)
-                    .load(backdropPath)
+                    .load("http://image.tmdb.org/t/p/w500"+backdropPath)
                     .into(img)
         }
 

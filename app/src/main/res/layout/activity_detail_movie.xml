@@ -33,7 +33,8 @@
                 android:id="@+id/shapeView"
                 android:layout_width="match_parent"
                 android:layout_height="250dp"
-                android:elevation="10dp"
+                android:elevation="5dp"
+                android:paddingBottom="8dp"
                 app:shape_diagonal_angle="-10"
                 app:shape_diagonal_position="bottom">
 
@@ -41,6 +42,7 @@
                     android:id="@+id/imgBack"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:scaleType="fitXY"
                     android:src="@color/colorPrimary"
                     app:imageBackdropPath="@{imageBackdrop}" />
 
@@ -70,8 +72,9 @@
 
                     <ImageView
                         imagePosterPath="@{imageCirclePoster}"
-                        android:layout_width="130dp"
-                        android:layout_height="160dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
                         android:src="@color/colorAccent" />
                 </androidx.cardview.widget.CardView>
             </FrameLayout>
@@ -119,7 +122,9 @@
             android:layout_marginRight="16dp"
             android:fontFamily="@font/mr"
             android:paddingRight="8dp"
-            android:text="@{moviesDetail.genre, default = Horror}" />
+            android:text="@{moviesDetail.genre, default = Horror}"
+            android:textSize="11sp"
+            android:textStyle="italic" />
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -132,8 +137,12 @@
                 android:id="@+id/rate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:clickable="false"
+                android:isIndicator="true"
+                android:max="10"
                 android:numStars="5"
-                android:rating="@{moviesDetail.voteAverage,default=0}" />
+                android:rating="@={moviesDetail.voteAverage/2, default=7}"
+                android:stepSize="0.5" />
 
             <TextView
                 android:id="@+id/tvRate"
@@ -141,19 +150,25 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/rate"
-                android:text="@{Double.toString(moviesDetail.voteAverage), default =0.0}"
+                android:text="@{Float.toString(moviesDetail.voteAverage), default =0.0}"
                 android:textColor="@color/colorAccent"
                 android:textSize="24sp" />
 
         </RelativeLayout>
 
-        <TextView
+        <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:fontFamily="@font/mr"
-            android:text="@{moviesDetail.overview,default=overview}"
-            android:textSize="16sp" />
+            android:layout_height="match_parent"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:fontFamily="@font/mr"
+                android:text="@{moviesDetail.overview,default=overview}"
+                android:textSize="16sp" />
+        </androidx.core.widget.NestedScrollView>
     </LinearLayout>
 </layout>

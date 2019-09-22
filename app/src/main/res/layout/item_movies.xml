@@ -149,7 +149,7 @@
                     android:elevation="10dp"
                     android:fontFamily="@font/mm"
                     android:gravity="center"
-                    android:text="@{Double.toString(movie.voteAverage), default=0}"
+                    android:text="@{Float.toString(movie.voteAverage), default=0}"
                     android:textColor="@android:color/white"
                     android:textSize="20sp"
                     android:textStyle="bold"

@@ -13,7 +13,7 @@ fun generateDummyMovie(): ArrayList<MovieEntity> {
                     "/zfE0R94v1E8cuKAerbskfD3VfUt.jpg",
                     "/4W0FnjSGn4x0mKZlBRx8OjFxQUM.jpg",
                     "It Chapter Two",
-                    7.2,
+                    7.2F,
                     "27 years after overcoming the malevolent supernatural entity Pennywise, the former members of the Losers' Club, who have grown up and moved away from Derry, are brought back together by a devastating phone call.",
                     "2019-09-06"
             )
@@ -26,7 +26,7 @@ fun generateDummyMovie(): ArrayList<MovieEntity> {
                     "/y9IcwcD95wCPR3IGbzlZ00f64Sj.jpg",
                     "/jTab4cf4X1dJJVS4F8UOGuesvPd.jpg",
                     "Hustlers",
-                    6.8,
+                    6.8F,
                     "A crew of savvy former strip club employees band together to turn the tables on their Wall Street clients.",
                     "2019-09-12"
             )
@@ -38,7 +38,7 @@ fun generateDummyMovie(): ArrayList<MovieEntity> {
                     "/fapXd3v9qTcNBTm39ZC4KUVQDNf.jpg",
                     "/k2WyDw2NTUIWnuEs5gT7wgrCQg6.jpg",
                     "Angel Has Fallen",
-                    5.6,
+                    5.6F,
                     "Secret Service Agent Mike Banning is framed for the attempted assassination of the President and must evade his own agency and the FBI as he tries to uncover the real threat.",
                     "2019-08-21"
             )
@@ -51,7 +51,7 @@ fun generateDummyMovie(): ArrayList<MovieEntity> {
                     "/jIthqo2tQmW8TFN1fYpF8FmVL0o.jpg",
                     "/6Xsz9KHQmCcIcj3CoWQq5eLtVoT.jpg",
                     "Good Boys",
-                    6.6,
+                    6.6F,
                     "A group of young boys on the cusp of becoming teenagers embark on an epic quest to fix their broken drone before their parents get home.",
                     "2019-08-14"
             )
@@ -64,7 +64,7 @@ fun generateDummyMovie(): ArrayList<MovieEntity> {
                     "/vVYU0x9FRpiJNX7c54ciFnRBVYG.jpg",
                     "/6rJAeP8xlq0bHUdCNg5epBvrFVa.jpg",
                     "Night Hunter",
-                    6.2,
+                    6.2F,
                     "A police task force traps an online predator, only to discover that the depth of his crimes goes far beyond anything they had anticipated.",
                     "2019-08-29"
             )
@@ -77,7 +77,7 @@ fun generateDummyMovie(): ArrayList<MovieEntity> {
                     "/2bXbqYdUdNVa8VIWXVfclP2ICtT.jpg",
                     "/1TUg5pO1VZ4B0Q1amk3OlXvlpXV.jpg",
                     "The Lion King",
-                    7.2,
+                    7.2F,
                     "Simba idolises his father, King Mufasa, and takes to heart his own royal destiny. But not everyone in the kingdom celebrates the new cub's arrival. Scar, Mufasa's brother—and former heir to the throne—has plans of his own. The battle for Pride Rock is ravaged with betrayal, tragedy and drama, ultimately resulting in Simba's exile. With help from a curious pair of newfound friends, Simba will have to figure out how to grow up and take back what is rightfully his.",
                     "2019-07-12"
             )
@@ -90,7 +90,7 @@ fun generateDummyMovie(): ArrayList<MovieEntity> {
                     "/keym7MPn1icW1wWfzMnW3HeuzWU.jpg",
                     "/hpgda6P9GutvdkDX5MUJ92QG9aj.jpg",
                     "Fast & Furious Presents: Hobbs & Shaw",
-                    6.5,
+                    6.5F,
                     "A spinoff of The Fate of the Furious, focusing on Johnson's US Diplomatic Security Agent Luke Hobbs forming an unlikely alliance with Statham's Deckard Shaw.",
                     "2019-08-01"
             )
@@ -103,7 +103,7 @@ fun generateDummyMovie(): ArrayList<MovieEntity> {
                     "/AlN758e1JphXDV9zeh6ZK3Um2KT.jpg",
                     "/4XYxM4ZHX2mtdZe0z1psNUr7rxK.jpg",
                     "Anna",
-                    6.6,
+                    6.6F,
                     "Beneath Anna Poliatova's striking beauty lies a secret that will unleash her indelible strength and skill to become one of the world's most feared government assassins.",
                     "2019-06-19"
             )
@@ -116,7 +116,7 @@ fun generateDummyMovie(): ArrayList<MovieEntity> {
                     "/7QPdjLr46huVv25W0eO2XZGOj3O.jpg",
                     "/pWozCsrzMJzN8dbOm330sCKqdml.jpg",
                     "Yesterday",
-                    6.8,
+                    6.8F,
                     "Jack Malik is a struggling singer-songwriter in an English seaside town whose dreams of fame are rapidly fading, despite the fierce devotion and support of his childhood best friend, Ellie. After a freak bus accident during a mysterious global blackout, Jack wakes up to discover that he's the only person on Earth who can remember The Beatles.",
                     "2019-06-27"
             )
@@ -129,7 +129,7 @@ fun generateDummyMovie(): ArrayList<MovieEntity> {
                     "/rpS7ROczWulqfaXG2klYapULXKm.jpg",
                     "/vHse4QK31Vc3X7BKKU5GOQhYxv6.jpg",
                     "Child's Play",
-                    6.0,
+                    6.0F,
                     "Karen, a single mother, gifts her son Andy a Buddi doll for his birthday, unaware of its more sinister nature. A contemporary re-imagining of the 1988 horror classic.",
                     "2019-06-19"
             )

@@ -79,7 +79,7 @@ class TvShowEntity(
         @BindingAdapter("imagePosterPathTV")
         fun loadImagePosterPath(img: ImageView, posterPath: String) {
             Glide.with(img.context)
-                    .load(posterPath)
+                    .load("http://image.tmdb.org/t/p/w500"+posterPath)
                     .into(img)
         }
 
@@ -87,7 +87,7 @@ class TvShowEntity(
         @BindingAdapter("imageBackdropPathTV")
         fun loadImageBackdrpPath(img: ImageView, backdropPath: String) {
             Glide.with(img.context)
-                    .load(backdropPath)
+                    .load("http://image.tmdb.org/t/p/w500"+backdropPath)
                     .into(img)
         }
 

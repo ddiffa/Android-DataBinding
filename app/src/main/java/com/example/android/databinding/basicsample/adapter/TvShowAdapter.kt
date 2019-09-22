@@ -28,7 +28,7 @@ class TvShowAdapter(var list: ArrayList<TvShowEntity>) : RecyclerView.Adapter<Tv
 
         fun bind(tvShow: TvShowEntity) {
             binding.tvShows = tvShow
-            binding.imagePosterPathTV = "http://image.tmdb.org/t/p/w500"+tvShow.posterPathTV
+            binding.imagePosterPathTV = tvShow.posterPathTV
             binding.handler = EventHandler(binding.root.context)
         }
 

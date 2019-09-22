@@ -2,6 +2,7 @@ package com.example.databindingviewmodel.handler
 
 import android.content.Context
 import android.content.Intent
+import android.widget.Toast
 import com.example.android.databinding.basicsample.ui.detailmovie.DetailMovieActivity
 
 open class EventHandler(context: Context) {
@@ -16,6 +17,6 @@ open class EventHandler(context: Context) {
     }
 
     fun onTvShowDetailsClick(title : String){
-
+        Toast.makeText(mContext,title+" onClicked",Toast.LENGTH_SHORT).show()
     }
 }
