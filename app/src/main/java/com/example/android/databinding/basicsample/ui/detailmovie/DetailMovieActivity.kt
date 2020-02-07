@@ -8,6 +8,7 @@ import com.example.android.databinding.basicsample.R
 import com.example.android.databinding.basicsample.data.entity.MovieEntity
 import com.example.android.databinding.basicsample.data.viewmodel.MovieViewModel
 import com.example.android.databinding.basicsample.databinding.ActivityDetailMovieBinding
+import com.example.android.databinding.basicsample.util.convertRuntime
 import kotlinx.android.synthetic.main.activity_detail_movie.*
 
 class DetailMovieActivity : AppCompatActivity() {
@@ -21,6 +22,7 @@ class DetailMovieActivity : AppCompatActivity() {
         binding.moviesDetail = model
         binding.imageBackdrop = model?.backdropPath
         binding.imageCirclePoster = model?.posterPath
+        binding.tvRuntime = convertRuntime(model?.runtime.toString())
         imgBack.setOnClickListener { onBackPressed() }
     }
 }

@@ -14,7 +14,7 @@
 
         <variable
             name="handler"
-            type="com.example.databindingviewmodel.handler.EventHandler" />
+            type="com.example.android.databinding.basicsample.handler.EventHandler" />
     </data>
 
     <RelativeLayout
@@ -77,9 +77,12 @@
                         android:background="@drawable/bgruntime"
                         android:fontFamily="@font/mr"
                         android:maxLines="1"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
                         android:paddingLeft="16dp"
+                        android:textSize="10sp"
                         android:paddingRight="16dp"
-                        android:text="@{Integer.toString(tvShows.seasonTV), default = 1}"
+                        android:text="@{Integer.toString(tvShows.seasonTV) + ` Season`, default = 1}"
                         android:textColor="@android:color/white" />
 
 
@@ -146,7 +149,7 @@
                     android:elevation="10dp"
                     android:fontFamily="@font/mm"
                     android:gravity="center"
-                    android:text="@{Double.toString(tvShows.voteAverageTV), default=0}"
+                    android:text="@{Float.toString(tvShows.voteAverageTV), default=0}"
                     android:textColor="@android:color/white"
                     android:textSize="20sp"
                     android:textStyle="bold"

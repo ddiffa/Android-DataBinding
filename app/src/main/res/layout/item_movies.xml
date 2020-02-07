@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
+        <import type="android.view.View" />
         <variable
             name="movie"
             type="com.example.android.databinding.basicsample.data.entity.MovieEntity" />
@@ -13,8 +13,12 @@
             type="String" />
 
         <variable
+            name="tvRuntime"
+            type="String" />
+
+        <variable
             name="handler"
-            type="com.example.databindingviewmodel.handler.EventHandler" />
+            type="com.example.android.databinding.basicsample.handler.EventHandler" />
     </data>
 
     <RelativeLayout
@@ -80,9 +84,12 @@
                         android:fontFamily="@font/mr"
                         android:maxLines="1"
                         android:paddingLeft="16dp"
+                        android:paddingTop="4dp"
                         android:paddingRight="16dp"
-                        android:text="@{Integer.toString(movie.runtime), default = 1}"
-                        android:textColor="@android:color/white" />
+                        android:paddingBottom="4dp"
+                        android:text="@{tvRuntime, default=0}"
+                        android:textColor="@android:color/white"
+                        android:textSize="10sp" />
 
 
                     <TextView

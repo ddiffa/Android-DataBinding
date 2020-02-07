@@ -1,5 +1,6 @@
 package com.example.android.databinding.basicsample.util
 
+import android.widget.TextView
 import com.example.android.databinding.basicsample.data.entity.MovieEntity
 import com.example.android.databinding.basicsample.data.entity.TvShowEntity
 
@@ -8,7 +9,7 @@ fun generateDummyMovie(): ArrayList<MovieEntity> {
     var movies = ArrayList<MovieEntity>()
     movies.add(
             MovieEntity(
-                    169,
+                    "169",
                     "Horror,Comedy",
                     "/zfE0R94v1E8cuKAerbskfD3VfUt.jpg",
                     "/4W0FnjSGn4x0mKZlBRx8OjFxQUM.jpg",
@@ -21,7 +22,7 @@ fun generateDummyMovie(): ArrayList<MovieEntity> {
 
     movies.add(
             MovieEntity(
-                    107,
+                    107.toString(),
                     "Comedy,Crime,Drama",
                     "/y9IcwcD95wCPR3IGbzlZ00f64Sj.jpg",
                     "/jTab4cf4X1dJJVS4F8UOGuesvPd.jpg",
@@ -33,7 +34,7 @@ fun generateDummyMovie(): ArrayList<MovieEntity> {
     )
     movies.add(
             MovieEntity(
-                    121,
+                    126.toString(),
                     "Action",
                     "/fapXd3v9qTcNBTm39ZC4KUVQDNf.jpg",
                     "/k2WyDw2NTUIWnuEs5gT7wgrCQg6.jpg",
@@ -46,7 +47,7 @@ fun generateDummyMovie(): ArrayList<MovieEntity> {
 
     movies.add(
             MovieEntity(
-                    89,
+                    90.toString(),
                     "Comedy",
                     "/jIthqo2tQmW8TFN1fYpF8FmVL0o.jpg",
                     "/6Xsz9KHQmCcIcj3CoWQq5eLtVoT.jpg",
@@ -59,7 +60,7 @@ fun generateDummyMovie(): ArrayList<MovieEntity> {
 
     movies.add(
             MovieEntity(
-                    98,
+                    98.toString(),
                     "Thriller,Crime,Mystery",
                     "/vVYU0x9FRpiJNX7c54ciFnRBVYG.jpg",
                     "/6rJAeP8xlq0bHUdCNg5epBvrFVa.jpg",
@@ -72,7 +73,7 @@ fun generateDummyMovie(): ArrayList<MovieEntity> {
 
     movies.add(
             MovieEntity(
-                    118,
+                    118.toString(),
                     "Adventure,Animation,Family,Drama",
                     "/2bXbqYdUdNVa8VIWXVfclP2ICtT.jpg",
                     "/1TUg5pO1VZ4B0Q1amk3OlXvlpXV.jpg",
@@ -85,7 +86,7 @@ fun generateDummyMovie(): ArrayList<MovieEntity> {
 
     movies.add(
             MovieEntity(
-                    136,
+                    136.toString(),
                     "Action",
                     "/keym7MPn1icW1wWfzMnW3HeuzWU.jpg",
                     "/hpgda6P9GutvdkDX5MUJ92QG9aj.jpg",
@@ -98,7 +99,7 @@ fun generateDummyMovie(): ArrayList<MovieEntity> {
 
     movies.add(
             MovieEntity(
-                    119,
+                    119.toString(),
                     "Thriller,Action",
                     "/AlN758e1JphXDV9zeh6ZK3Um2KT.jpg",
                     "/4XYxM4ZHX2mtdZe0z1psNUr7rxK.jpg",
@@ -111,7 +112,7 @@ fun generateDummyMovie(): ArrayList<MovieEntity> {
 
     movies.add(
             MovieEntity(
-                    116,
+                    116.toString(),
                     "Comedy,Music,Romance,Fantasy",
                     "/7QPdjLr46huVv25W0eO2XZGOj3O.jpg",
                     "/pWozCsrzMJzN8dbOm330sCKqdml.jpg",
@@ -124,7 +125,7 @@ fun generateDummyMovie(): ArrayList<MovieEntity> {
 
     movies.add(
             MovieEntity(
-                    90,
+                    90.toString(),
                     "Horror, Science Fiction",
                     "/rpS7ROczWulqfaXG2klYapULXKm.jpg",
                     "/vHse4QK31Vc3X7BKKU5GOQhYxv6.jpg",
@@ -151,7 +152,7 @@ fun generateDummyTvShow(): ArrayList<TvShowEntity> {
                     8,
                     "Spoiled billionaire playboy Oliver Queen is missing and presumed dead when his yacht is lost at sea. He returns five years later a changed man, determined to clean up the city as a hooded vigilante armed with a bow.",
                     "/mo0FP1GxOFZT4UDde7RFDz5APXF.jpg",
-                    5.8
+                    5.8F
             )
     )
 
@@ -164,7 +165,7 @@ fun generateDummyTvShow(): ArrayList<TvShowEntity> {
                     116,
                     6,
                     "After a particle accelerator causes a freak storm, CSI Investigator Barry Allen is struck by lightning and falls into a coma. Months later he awakens with the power of super speed, granting him the ability to move through Central City like an unseen guardian angel. Though initially excited by his newfound powers, Barry is shocked to discover he is not the only \"meta-human\" who was created in the wake of the accelerator explosion -- and not everyone is using their new powers for good. Barry partners with S.T.A.R. Labs and dedicates his life to protect the innocent. For now, only a few close friends and associates know that Barry is literally the fastest man alive, but it won't be long before the world learns what Barry Allen has become...The Flash.",
-                    "/fki3kBlwJzFp8QohL43g9ReV455.jpg", 6.7
+                    "/fki3kBlwJzFp8QohL43g9ReV455.jpg", 6.7F
             )
     )
 
@@ -178,7 +179,7 @@ fun generateDummyTvShow(): ArrayList<TvShowEntity> {
                     5,
                     "What did the world look like as it was transforming into the horrifying apocalypse depicted in \"The Walking Dead\"? This spin-off set in Los Angeles, following new characters as they face the beginning of the end of the world, will answer that question.",
                     "/lZMb3R3e5vqukPbeDMeyYGf2ZNG.jpg",
-                    6.3
+                    6.3F
             )
     )
 
@@ -191,7 +192,7 @@ fun generateDummyTvShow(): ArrayList<TvShowEntity> {
                     8,
                     1,
                     "A group of vigilantes known informally as “The Boys” set out to take down corrupt superheroes with no more than blue-collar grit and a willingness to fight dirty.",
-                    "/dzOxNbbz1liFzHU1IPvdgUR647b.jpg", 8.1
+                    "/dzOxNbbz1liFzHU1IPvdgUR647b.jpg", 8.1F
             )
     )
 
@@ -203,7 +204,7 @@ fun generateDummyTvShow(): ArrayList<TvShowEntity> {
                     307,
                     15,
                     "When they were boys, Sam and Dean Winchester lost their mother to a mysterious and demonic supernatural force. Subsequently, their father raised them to be soldiers. He taught them about the paranormal evil that lives in the dark corners and on the back roads of America ... and he taught them how to kill it. Now, the Winchester brothers crisscross the country in their '67 Chevy Impala, battling every kind of supernatural threat they encounter along the way. ",
-                    "/3iFm6Kz7iYoFaEcj4fLyZHAmTQA.jpg", 7.3
+                    "/3iFm6Kz7iYoFaEcj4fLyZHAmTQA.jpg", 7.3F
             )
     )
 
@@ -217,7 +218,7 @@ fun generateDummyTvShow(): ArrayList<TvShowEntity> {
                     18,
                     "When the brewery announces it will be firing one employee, Peter is nervous he will be the one let go; the family departs on a Yacht Rock cruise that doesn't go as expected.",
                     "/gBGUL1UTUNmdRQT8gA1LUV4yg39.jpg",
-                    6.5
+                    6.5F
             )
     )
 
@@ -231,7 +232,7 @@ fun generateDummyTvShow(): ArrayList<TvShowEntity> {
                     2,
                     "A team of young superheroes led by Nightwing (formerly Batman's first Robin) form to combat evil and other perils.",
                     "/eeHI5iBSCOxj4HGSOmFM6azBmwb.jpg",
-                    7.4
+                    7.4F
             )
     )
 
@@ -245,7 +246,7 @@ fun generateDummyTvShow(): ArrayList<TvShowEntity> {
                     5,
                     "Before there was Batman, there was GOTHAM. \n\nEveryone knows the name Commissioner Gordon. He is one of the crime world's greatest foes, a man whose reputation is synonymous with law and order. But what is known of Gordon's story and his rise from rookie detective to Police Commissioner? What did it take to navigate the multiple layers of corruption that secretly ruled Gotham City, the spawning ground of the world's most iconic villains? And what circumstances created them – the larger-than-life personas who would become Catwoman, The Penguin, The Riddler, Two-Face and The Joker? ",
                     "/4XddcRDtnNjYmLRMYpbrhFxsbuq.jpg",
-                    6.8
+                    6.8F
             )
     )
 
@@ -258,7 +259,7 @@ fun generateDummyTvShow(): ArrayList<TvShowEntity> {
                     663, 31,
                     "Set in Springfield, the average American town, the show focuses on the antics and everyday adventures of the Simpson family; Homer, Marge, Bart, Lisa and Maggie, as well as a virtual cast of thousands. Since the beginning, the series has been a pop culture icon, attracting hundreds of celebrities to guest star. The show has also made name for itself in its fearless satirical take on politics, media and American life in general.",
                     "/yTZQkSsxUFJZJe67IenRM0AEklc.jpg",
-                    7.1
+                    7.1F
             )
     )
 
@@ -272,7 +273,7 @@ fun generateDummyTvShow(): ArrayList<TvShowEntity> {
                     6,
                     "With time running short, the team will have to go TO HELL AND BACK to stop the end of everything. Who will survive?",
                     "/cXiETfFK1BTLest5fhTLfDLRdL6.jpg",
-                    6.8
+                    6.8F
             )
     )
     return tvShows

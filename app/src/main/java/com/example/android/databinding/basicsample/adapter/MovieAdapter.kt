@@ -7,7 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.android.databinding.basicsample.R
 import com.example.android.databinding.basicsample.databinding.ItemMoviesBinding
 import com.example.android.databinding.basicsample.data.entity.MovieEntity
-import com.example.databindingviewmodel.handler.EventHandler
+import com.example.android.databinding.basicsample.handler.EventHandler
+import com.example.android.databinding.basicsample.util.convertRuntime
 
 class MovieAdapter(var list: ArrayList<MovieEntity>) : RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -31,6 +32,7 @@ class MovieAdapter(var list: ArrayList<MovieEntity>) : RecyclerView.Adapter<Movi
             dataBinding.movie = movieEntity
             dataBinding.imagePosterPath = movieEntity.posterPath
             dataBinding.handler = EventHandler(dataBinding.root.context)
+            dataBinding.tvRuntime = convertRuntime(movieEntity.runtime)
         }
 
     }

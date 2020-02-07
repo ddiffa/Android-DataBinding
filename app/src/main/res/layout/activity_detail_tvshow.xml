@@ -6,23 +6,17 @@
 
     <data>
 
-        <import type="android.view.View" />
-
         <variable
-            name="imageCirclePoster"
+            name="imageCirclePosterTV"
             type="String" />
 
         <variable
-            name="imageBackdrop"
+            name="imageBackdropTV"
             type="String" />
 
         <variable
-            name="tvRuntime"
-            type="String" />
-
-        <variable
-            name="moviesDetail"
-            type="com.example.android.databinding.basicsample.data.entity.MovieEntity" />
+            name="tvDetail"
+            type="com.example.android.databinding.basicsample.data.entity.TvShowEntity" />
     </data>
 
     <LinearLayout
@@ -50,7 +44,7 @@
                     android:layout_height="match_parent"
                     android:scaleType="fitXY"
                     android:src="@color/colorPrimary"
-                    app:imageBackdropPath="@{imageBackdrop}" />
+                    app:imageBackdropPath="@{imageBackdropTV}" />
 
 
             </com.github.florent37.shapeofview.shapes.DiagonalView>
@@ -77,7 +71,7 @@
                     app:cardUseCompatPadding="true">
 
                     <ImageView
-                        imagePosterPath="@{imageCirclePoster}"
+                        imagePosterPath="@{imageCirclePosterTV}"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:scaleType="centerCrop"
@@ -86,6 +80,7 @@
             </FrameLayout>
 
         </RelativeLayout>
+
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -99,16 +94,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="4dp"
-                android:layout_toLeftOf="@+id/movieRuntime"
+                android:layout_toLeftOf="@id/tvSeason"
                 android:fontFamily="@font/ml"
                 android:paddingRight="8dp"
-                android:text="@{moviesDetail.title, default = IT}"
+                android:text="@{tvDetail.titleTV, default = IT}"
                 android:textColor="@android:color/background_dark"
                 android:textSize="20dp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/movieRuntime"
+                android:id="@+id/tvSeason"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -119,7 +114,7 @@
                 android:paddingTop="4dp"
                 android:paddingRight="8dp"
                 android:paddingBottom="4dp"
-                android:text="@{tvRuntime, default=0}"
+                android:text="@{Integer.toString(tvDetail.seasonTV) + ` Season`, default=0}"
                 android:textColor="@android:color/white"
                 android:textSize="12sp" />
         </RelativeLayout>
@@ -133,7 +128,7 @@
             android:layout_marginRight="16dp"
             android:fontFamily="@font/mr"
             android:paddingRight="8dp"
-            android:text="@{moviesDetail.genre, default = Horror}"
+            android:text="@{tvDetail.genreTV, default = Horror}"
             android:textSize="11sp"
             android:textStyle="italic" />
 
@@ -152,7 +147,7 @@
                 android:isIndicator="true"
                 android:max="10"
                 android:numStars="5"
-                android:rating="@={moviesDetail.voteAverage/2, default=7}"
+                android:rating="@={tvDetail.voteAverageTV/2, default=7}"
                 android:stepSize="0.5" />
 
             <TextView
@@ -161,7 +156,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/rate"
-                android:text="@{Float.toString(moviesDetail.voteAverage), default =0.0}"
+                android:text="@{Float.toString(tvDetail.voteAverageTV), default =0.0}"
                 android:textColor="@color/colorAccent"
                 android:textSize="24sp" />
 
@@ -178,8 +173,10 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:fontFamily="@font/mr"
-                android:text="@{moviesDetail.overview,default=overview}"
+                android:text="@{tvDetail.overviewTV,default=overview}"
                 android:textSize="16sp" />
         </androidx.core.widget.NestedScrollView>
+
     </LinearLayout>
+
 </layout>

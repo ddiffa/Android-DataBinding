@@ -17,7 +17,7 @@ class TvShowEntity(
         _seasonTV: Int,
         _overviewTV: String,
         _posterPathTV: String,
-        _voteAverageTV: Double
+        _voteAverageTV: Float
 ) : BaseObservable() {
     @get : Bindable
     var titleTV: String = _titleYV
@@ -55,7 +55,7 @@ class TvShowEntity(
         }
 
     @get : Bindable
-    var voteAverageTV: Double = _voteAverageTV
+    var voteAverageTV: Float = _voteAverageTV
         set(value) {
             field = value
             notifyPropertyChanged(BR.voteAverageTV)
@@ -77,7 +77,7 @@ class TvShowEntity(
     companion object {
         @JvmStatic
         @BindingAdapter("imagePosterPathTV")
-        fun loadImagePosterPath(img: ImageView, posterPath: String) {
+        fun loadImagePosterPathTV(img: ImageView, posterPath: String) {
             Glide.with(img.context)
                     .load("http://image.tmdb.org/t/p/w500"+posterPath)
                     .into(img)
@@ -85,7 +85,7 @@ class TvShowEntity(
 
         @JvmStatic
         @BindingAdapter("imageBackdropPathTV")
-        fun loadImageBackdrpPath(img: ImageView, backdropPath: String) {
+        fun loadImageBackdropPathTV(img: ImageView, backdropPath: String) {
             Glide.with(img.context)
                     .load("http://image.tmdb.org/t/p/w500"+backdropPath)
                     .into(img)

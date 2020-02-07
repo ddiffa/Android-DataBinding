@@ -15,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.detailmovie.DetailMovieActivity"></activity>
+        <activity android:name=".ui.detailtvshow.DetailTVShowActivity"></activity>
+        <activity android:name=".ui.detailmovie.DetailMovieActivity" />
         <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
