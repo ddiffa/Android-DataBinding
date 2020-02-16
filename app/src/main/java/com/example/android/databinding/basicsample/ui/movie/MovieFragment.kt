@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
+import com.example.android.databinding.basicsample.BaseApplication
 import com.example.android.databinding.basicsample.R
 import com.example.android.databinding.basicsample.adapter.MovieAdapter
 import com.example.android.databinding.basicsample.data.viewmodel.MovieViewModel
@@ -34,8 +35,9 @@ class MovieFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        val appComponent = BaseApplication.INSTANCE.getAppComponent()
         viewModel = ViewModelProviders.of(this)[MovieViewModel::class.java]
-        val adapter = MovieAdapter(viewModel.getListMovie())
+        val adapter = MovieAdapter(viewModel.getListMovie(appComponent))
         binding.adapter = adapter
     }
 

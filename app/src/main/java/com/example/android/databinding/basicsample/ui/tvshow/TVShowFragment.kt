@@ -8,14 +8,12 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
+import com.example.android.databinding.basicsample.BaseApplication
 import com.example.android.databinding.basicsample.R
 import com.example.android.databinding.basicsample.adapter.TvShowAdapter
 import com.example.android.databinding.basicsample.data.viewmodel.TvShowViewModel
 import com.example.android.databinding.basicsample.databinding.FragmentTvshowBinding
 
-/**
- * A simple [Fragment] subclass.
- */
 class TVShowFragment : Fragment() {
 
     private lateinit var binding: FragmentTvshowBinding
@@ -37,8 +35,11 @@ class TVShowFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
+        val appComponent = BaseApplication.INSTANCE.getAppComponent()
+
         viewModel = ViewModelProviders.of(this)[TvShowViewModel::class.java]
-        val adapter = TvShowAdapter(viewModel.getDataTvShow())
+        val adapter = TvShowAdapter(viewModel.getDataTvShow(appComponent))
         binding.adapter = adapter
     }
 

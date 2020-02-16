@@ -103,12 +103,14 @@
                         android:textSize="11sp" />
 
                     <TextView
+                        android:id="@+id/tvItemDetails"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_toRightOf="@+id/tvOverview"
                         android:fontFamily="@font/mm"
                         android:onClick="@{()->handler.onMovieDetailsClick(movie.title)}"
                         android:text="Details"
+                        android:contentDescription="tvItemDetailMovie"
                         android:textColor="@color/colorPrimary"
                         android:textSize="11sp"
                         android:textStyle="bold" />

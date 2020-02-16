@@ -1,6 +1,5 @@
 package com.example.android.databinding.basicsample.util
 
-import android.widget.TextView
 import com.example.android.databinding.basicsample.data.entity.MovieEntity
 import com.example.android.databinding.basicsample.data.entity.TvShowEntity
 

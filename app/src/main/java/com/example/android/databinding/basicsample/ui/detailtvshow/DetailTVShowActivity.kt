@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
+import com.example.android.databinding.basicsample.BaseApplication
 import com.example.android.databinding.basicsample.R
 import com.example.android.databinding.basicsample.data.entity.TvShowEntity
 import com.example.android.databinding.basicsample.data.viewmodel.TvShowViewModel
@@ -17,7 +18,10 @@ class DetailTVShowActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_detail_tvshow)
         viewModel = ViewModelProviders.of(this)[TvShowViewModel::class.java]
-        val model : TvShowEntity? = viewModel.getDataTvShowByTitle(intent.getStringExtra("data"))
+
+        val appComponent = BaseApplication.INSTANCE.getAppComponent()
+
+        val model : TvShowEntity? = viewModel.getDataTvShowByTitle(intent.getStringExtra("data"), appComponent)
         binding.tvDetail = model
         binding.imageBackdropTV = model?.backdropPathTV
         binding.imageCirclePosterTV = model?.posterPathTV

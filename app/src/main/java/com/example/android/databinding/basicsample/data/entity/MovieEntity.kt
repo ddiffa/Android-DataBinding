@@ -1,7 +1,6 @@
 package com.example.android.databinding.basicsample.data.entity
 
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable
 import androidx.databinding.BindingAdapter

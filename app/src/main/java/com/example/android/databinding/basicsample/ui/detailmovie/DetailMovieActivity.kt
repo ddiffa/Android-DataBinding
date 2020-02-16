@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
+import com.example.android.databinding.basicsample.BaseApplication
 import com.example.android.databinding.basicsample.R
 import com.example.android.databinding.basicsample.data.entity.MovieEntity
 import com.example.android.databinding.basicsample.data.viewmodel.MovieViewModel
@@ -16,9 +17,14 @@ class DetailMovieActivity : AppCompatActivity() {
     private lateinit var viewModel: MovieViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+
         binding = DataBindingUtil.setContentView(this, R.layout.activity_detail_movie)
         viewModel = ViewModelProviders.of(this)[MovieViewModel::class.java]
-        val model: MovieEntity? = viewModel.getMovieByTitle(intent.getStringExtra("data"))
+
+        val appComponent = BaseApplication.INSTANCE.getAppComponent()
+
+        val model: MovieEntity? = viewModel.getMovieByTitle(intent.getStringExtra("data"), appComponent)
         binding.moviesDetail = model
         binding.imageBackdrop = model?.backdropPath
         binding.imageCirclePoster = model?.posterPath
