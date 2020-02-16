@@ -1,5 +1,6 @@
 package com.example.android.databinding.basicsample.ui
 
+import android.content.Intent
 import androidx.recyclerview.widget.RecyclerView
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
@@ -11,6 +12,7 @@ import androidx.test.rule.ActivityTestRule
 import com.example.android.databinding.basicsample.R
 import com.example.android.databinding.basicsample.util.generateDummyMovie
 import com.example.android.databinding.basicsample.util.generateDummyTvShow
+import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 
@@ -20,7 +22,6 @@ class MainActivityTest {
 
     @get:Rule
     var activityRule = ActivityTestRule<MainActivity>(MainActivity::class.java)
-
 
     @Test
     fun scrollRecyclerViewMovie() {

@@ -9,6 +9,7 @@ import com.example.android.databinding.basicsample.R
 import com.example.android.databinding.basicsample.data.entity.TvShowEntity
 import com.example.android.databinding.basicsample.data.viewmodel.TvShowViewModel
 import com.example.android.databinding.basicsample.databinding.ActivityDetailTvshowBinding
+import kotlinx.android.synthetic.main.activity_detail_tvshow.*
 
 class DetailTVShowActivity : AppCompatActivity() {
 
@@ -20,7 +21,7 @@ class DetailTVShowActivity : AppCompatActivity() {
         viewModel = ViewModelProviders.of(this)[TvShowViewModel::class.java]
 
         val appComponent = BaseApplication.INSTANCE.getAppComponent()
-
+        imgBack.setOnClickListener { onBackPressed() }
         val model : TvShowEntity? = viewModel.getDataTvShowByTitle(intent.getStringExtra("data"), appComponent)
         binding.tvDetail = model
         binding.imageBackdropTV = model?.backdropPathTV
